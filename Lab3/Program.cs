@@ -12,7 +12,7 @@ namespace Lab3
         static void Main(string[] args)
         {
             bool run = true;
-            int num, square, cube;
+            int num;
 
             Console.WriteLine("Please enter an integer:");
 
@@ -21,9 +21,12 @@ namespace Lab3
                 num = int.Parse(Console.ReadLine());
 
                 Console.WriteLine("Number    Squared    Cubed\n======    =======    =====");
-                //Console.WriteLine("{0,0}{1,10}{2,11}", num, square, cube);
-
-
+                
+                for ( int i = 1; i <= num; i++)
+                {
+                    Console.WriteLine("{0,0}{1,10}{2,11}", i, SquareInput(i), CubeInput(i));
+                }
+                
 
                 //ask user if they want to continue
                 Console.WriteLine("Do you want to continue?");
